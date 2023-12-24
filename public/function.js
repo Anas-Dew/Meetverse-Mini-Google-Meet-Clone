@@ -20,5 +20,28 @@ const inviteOthers = () => {
 };
 
 const leaveMeeting = () => {
-    window.location.href = '/meeting-left'
+    document.getElementById('leaving-room-div').classList.replace('hidden', 'flex')
+    document.getElementById('leaving-room-div').classList.add('swing-in-left-bck')
+    setTimeout(() => {
+        window.location.href = '/meeting-left'
+    }, 3000);
+}
+
+const BrightMode = () => {
+    document.getElementById('body').classList.toggle('bg-white');
+    document.getElementById('navigation-panel').classList.toggle('bg-[#a9a9a9]');
+    document.getElementById('bright-mode-div').classList.replace('hidden', 'flex');
+    document.getElementById('sun-icon').classList.add('rotate-center');
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen(); 
+      }
+    }
+    
+    setTimeout(() => {
+        document.getElementById('bright-mode-div').classList.replace('flex', 'hidden');
+
+    }, 1500);
 }

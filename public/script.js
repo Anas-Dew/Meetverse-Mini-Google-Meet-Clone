@@ -12,8 +12,8 @@ const myVideo = document.createElement('video')
 myVideo.muted = true;
 
 navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: true
+    audio: true,
+    video: true
 }).then(stream => {
     addVideoStream(myVideo, stream)
 
@@ -60,4 +60,9 @@ function connectToNewUser(userId, stream) {
     call.on('close', () => {
         video.remove()
     });
+}
+
+function toggleVideoMute() {
+    myVideo.muted = !myVideo.muted;
+    console.log("Mic", myVideo.muted);
 }
