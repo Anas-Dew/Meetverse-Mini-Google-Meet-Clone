@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Dewsverse Video Conference
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        img {
+            max-width: 356px;
+            min-width: 356px;
+        }
+
+        #meeting-grid {
+            place-self: center;
+            max-width: 800px;
+            min-width: 400px;
+            max-height: 800px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-800">
+    <div class="flex flex-col h-screen">
+        <!-- Video Grid -->
+        <div id="meeting-grid" class="w-[80%] grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+            <!-- Participant 1 -->
+            <div class="bg-black">
+                <img alt="" class="w-full h-full object-cover" height="400"
+                    src=""
+                    width="600" />
+            </div>
+   
+            <div class="bg-black">
+                <img alt=""
+                    class="w-full h-full object-cover" height="400"
+                    src=""
+                    width="600" />
+            </div>
+        </div>
+        <!-- Controls and Chat -->
+        <div>
+            <!-- Controls -->
+            <div class="">
+                <div style="position: fixed;
+                bottom: 22px;
+                left: 20px;" class="">
+                    <button class="bg-gray-700 text-white p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-microphone">
+                        </i>
+                        Mute
+                    </button>
+                    <button class="bg-gray-700 text-white p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-video">
+                        </i>
+                        Stop Video
+                    </button>
+                </div>
+                <div style="position: fixed;
+                bottom: 22px;
+                right: 20px;" class="hidden md:block">
+                    <button class="bg-gray-700 text-white p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-user-friends">
+                        </i>
+                        Invite
+                    </button>
+                    <button class="bg-gray-700 text-white p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-comment-alt">
+                        </i>
+                        Chat
+                    </button>
+                    <button class="bg-gray-700 text-white p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-desktop">
+                        </i>
+                        Share Screen
+                    </button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

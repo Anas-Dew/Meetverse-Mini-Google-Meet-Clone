@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dewsverse Video Conference</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mitr&family=Rubik+Doodle+Shadow&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1, h2 {
+            font-family: 'Rubik Doodle Shadow', sans-serif;
+        }
+        p {
+            font-family: 'Mitr', sans-serif
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4">
+        <header class="flex justify-between items-center py-4">
+            <p style="font-size: 20px;" class="">Dewsverse Video Conference</p>
+            <div class="flex items-center space-x-4">
+                <p id="local-time" class="text-gray-500">Loading...</>
+                <button class="text-gray-500">
+                    <i class="far fa-bell"></i>
+                </button>
+                <button class="text-gray-500">
+                    <i class="fas fa-cog"></i>
+                </button>
+                
+            </div>
+        </header>
+
+        <main class="flex justify-around items-center mt-12 p-8">
+            <div class="">
+                <h1 class="text-5xl font-bold mb-6">Unlimited video chats.<br>Free for everyone.</h1>
+                <p class="text-lg text-gray-700 ">A free service for everyone to have no-lag unlimited video chat.</p>
+                <p class="text-lg text-gray-700 mb-6">A product of dewsverse.space</p>
+                <div class="flex space-x-4 mb-6">
+                    <button onclick="createInstantRoom();" class="bg-[#f2f200] text-black border-solid border-2 border-black px-6 py-2 rounded font-medium hover:bg-[#ffff2e] focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">Create Instant Room</button>
+                    <!-- <div class="flex border-2 border-gray-300 rounded overflow-hidden">
+                        <input type="text" class="px-4 py-2" placeholder="Enter a code or link">
+                        <button class="bg-gray-100 px-6 py-2 hover:bg-gray-200 focus:outline-none">Join</button>
+                    </div> -->
+                </div>
+                <a href="https://dewsverse.space/" target="_blank" class="text-blue-600 hover:underline">Learn more about Dewsverse</a>
+            </div>
+            <div class="flex justify-end">
+                <div class="relative">
+                    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 text-gray-500 focus:outline-none">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <img style="border-radius: 29px;scale: 0.9;border: 2px solid yellow;" src="https://th.bing.com/th/id/OIG..dni4grhMopjV2UWOY_k?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Illustration of people having a video conference" class="rounded-full w-[200px] md:w-[500px] hidden md:block">
+                    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 text-gray-500 focus:outline-none">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="text-center py-8">
+            <p class="text-gray-600">Get a link that you can share</p>
+            <p class="text-gray-500 text-sm">Click <strong>Create Instant Room</strong> to get a link that you can send to people that you want to meet with.</p>
+        </footer>
+    </div>
+</body>
+<script>
+    setInterval(() => {
+        const currentTime = new Date().toLocaleTimeString();
+        const currentDate = new Date().toLocaleDateString();
+        document.getElementById('local-time').innerText = currentTime + " " + currentDate
+    }, 1000);
+
+    const createInstantRoom = () => {
+        window.location.href = '/create-instant-meeting';
+    };
+</script>
+</html>
