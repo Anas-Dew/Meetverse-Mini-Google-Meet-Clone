@@ -37,6 +37,7 @@ function addVideoStream(video, stream) {
         video.play();
     })
 
+    video.classList.add('scale-in-center')
     videoGrid.append(video)
 
 }
