@@ -23,8 +23,8 @@ const leaveMeeting = () => {
     document.getElementById('leaving-room-div').classList.replace('hidden', 'flex')
     document.getElementById('leaving-room-div').classList.add('swing-in-left-bck')
     setTimeout(() => {
-        window.location.href = '/meeting-left'
-    }, 3000);
+        window.location.href = '/'
+    }, 2000);
 }
 
 const BrightMode = () => {
